@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CharactCard = styled.div `
+const CharacterCard = styled.div `
     margin: auto;
     padding: 20px;
     width: 90%;
@@ -10,23 +10,21 @@ const CharactCard = styled.div `
     background-color: slategrey;
     color: red;
 `
-const CharactName = styled.h2 `
+const CharacterName = styled.h2 `
     font-size: 45px;
     color: red;
 `
-const Character = (charData) => {
-    const charInfo= (charData.charData);
-    console.log(charInfo);
+const Character = (props) =>{
 
     return(
-        <CharactCard>
-            <CharactName>{charInfo.name}</CharactName>
-            <span>Gender:{charInfo.gender} </span>
-            <span>Height: {charInfo.height}</span>
-            <span>Birth Year: {charInfo.birth_year}</span>
-            <span>Home Planet: {charInfo.homeworld}</span>
-            <span>Films: {charInfo.films}</span>
-        </CharactCard>  
+        <CharacterCard>
+            <CharacterName>{props.name}</CharacterName>
+            <p>Gender:{props.gender} </p>
+            <p>Height: {props.height}</p>
+            <p>Birth Year: {props.birth_year}</p>
+            <p>Home Planet: {props.homeworld}</p>
+            <p>Films: {props.films}</p>
+        </CharacterCard>  
     );
 };
 
