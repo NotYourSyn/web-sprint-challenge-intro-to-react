@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import Character from "./Character";
 
 export default function CharacterList() {
@@ -11,7 +10,7 @@ export default function CharacterList() {
       .get(`http https://swapi.dev/api/people/`)
       .then((res) => {
         console.log("Res: ", res);
-        setFilms(res.data);
+        setCharacters(res.data);
       })
       .catch((err) => {
         console.log("Error occurred: ", err);
@@ -19,19 +18,20 @@ export default function CharacterList() {
   }, []);
 
   return (
-    // <div className="#">
-    //   {films.map((film) => {
-    //     return (
-    //         <CharacterCard
-    //         <CharacterName>{props.name}</CharacterName>
-    //         <p>Gender:{props.gender} </p>
-    //         <p>Height: {props.height}</p>
-    //         <p>Birth Year: {props.birth_year}</p>
-    //         <p>Home Planet: {props.homeworld}</p>
-    //         <p>Films: {props.films}</p>
-    //         />
-    //     );
-    //   })}
-    // </div>
+    <div className="#">
+      {characters.map((character) => {
+        return (
+            <CharacterCard
+                 key={character.id}
+                //<CharacterName>{character.name}</CharacterName>
+                 Gender={chraacter.gender}
+                 Height={character.height}
+                 Birth Year={character.birth_year}
+                 Home Planet={character.homeworld}
+                 Films={character.films}
+            />
+        );
+      })}
+    </div>
   );
 }
