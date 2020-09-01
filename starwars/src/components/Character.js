@@ -8,11 +8,11 @@ const CharacterCard = styled.div `
     width: 90%;
     border: 1.5px solid black;
     background-color: slategrey;
-    color: red;
+    color: white;
 `
 const CharacterName = styled.h2 `
     font-size: 45px;
-    color: red;
+    color: white;
 `
 const Character = (props) =>{
 

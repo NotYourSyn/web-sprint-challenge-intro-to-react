@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars</h1>
-        <CharacterCard/>
+        <CharacterList/>
     </div>
   );
 }

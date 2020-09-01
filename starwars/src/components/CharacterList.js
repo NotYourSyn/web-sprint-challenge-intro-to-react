@@ -18,7 +18,7 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <div className="#">
+    <div className="character">
       {characters.map((character) => {
         return (
             <CharacterCard
