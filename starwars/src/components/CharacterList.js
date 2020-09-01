@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+//import styled from 'styled-components';
 import Character from "./Character";
 
 export default function CharacterList() {
@@ -21,10 +22,10 @@ export default function CharacterList() {
     <div className="character">
       {characters.map((character) => {
         return (
-            <CharacterCard
+            <Character
                  key={character.id}
                 //<CharacterName>{character.name}</CharacterName>
-                 Gender={chraacter.gender}
+                 Gender={character.gender}
                  Height={character.height}
                  Birth Year={character.birth_year}
                  Home Planet={character.homeworld}
