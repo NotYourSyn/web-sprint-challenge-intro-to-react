@@ -1,4 +1,5 @@
 import React from 'react';
+import CharacterList from './components/CharacterList';
 import './App.css';
 
 const App = () => {
@@ -9,9 +10,11 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
+
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars</h1>
+        <CharacterList/>
     </div>
   );
 }
